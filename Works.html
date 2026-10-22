@@ -1,81 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Works | Ummi Rufaidah</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <a href="Home">Home</a>
-                <a href="Works.html">Works</a>
-                <a href="Project.html">Project</a>
-                <a href="About.html">About</a>
-                <a href="Contact.html">Contact</a>
-            </nav>
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PORTOFOLIO</a>
+        <button class="navbar-toggler" 
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto gap-lg-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="works.html">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Project.html">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-    </header>
-    <section>
-        <div class="container">
-            <h2> Academic Publication</h2>
-        </div>
-        <div>
-            <h2>Article 1</h2>
-            <img src="c:\Users\Asus\OneDrive\Gambar\Screenshots\Screenshot 2026-10-20 134651.png" alt="Cover article">
-            <h3>Analisis Efektivitas Protokol Autentikasi Jaringan Nirkabel Berdasarkan Parameter (QoS)</h3>
-            <p>Jejak Digital: Jurnal Ilmiah Multidisiplin, Vol. 2 No. 4, 2026</p>
-            <p>Artikel ini membahas pengaruh sistem autentikasi terhadap kualitas Wi-Fi kampus di Universitas Sulawesi Barat, dengan membandingkan jaringan yang terbuka dan yang memakai autentikasi berdasarkan parameter QoS.</p>
-            <nav>
-                <a href="Project">Detail</a>
-            </nav>
-        </div>
-        <div>
-            <h2>Article 2</h2>
-            <img src="c:\Users\Asus\OneDrive\Gambar\Screenshots\Screenshot 2026-10-20 135643.png" alt="Cover article">
-            <h3>Studi Komparatif Efisiensi Memori antara Struktur Data Array dan Linked List</h3>
-            <p>Jejak Digital: Jurnal Ilmiah Multidisiplin, Vol. 2 No. 4, 2026</p>
-            <p>Artikel ini membandingkan array dan linked list dari sisi efisiensi memori dan kecepatan operasi, lewat benchmark di C++ dan Python. Hasilnya, array unggul untuk akses data dan hemat memori, sedangkan linked list unggul untuk penyisipan dan penghapusan data di tengah, meski dengan overhead pointer yang besar.</p>
-            <nav>
-                <a href="Project">Detail</a>
-            </nav>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <h2> Project</h2>
-        </div>
-        <div>
-            <h2>Project 1</h2>
-            <img src="c:\Users\Asus\OneDrive\Gambar\Screenshots\Screenshot 2026-10-20 140644.png" alt="Cover project">
-            <h3>Web Profil Tim</h3>
-            <p>HTML, CSS</p>
-            <p>.</p>
-            <nav>
-                <a href="Project">Detail</a>
-            </nav>
-        </div>
-        <div>
-            <h2>Project 2</h2>
-            <img src="c:\Users\Asus\OneDrive\Gambar\Screenshots\Screenshot 2026-10-20 141027.png" alt="Cover project">
-            <h3>Form Registrasi</h3>
-            <p>HTML, JavaScript, CSS</p>
-            <p></p>
-            <nav>
-                <a href="Project">Detail</a>
-            </nav>
-        </div>
-        <div>
-            <h2>Project 3</h2>
-            <img src="c:\Users\Asus\OneDrive\Gambar\Screenshots\Screenshot 2026-10-20 141755.png" alt="Cover project">
-            <h3>Kalkulator Sederhana</h3>
-            <p>HTML, JavaScript, CSS</p>
-            <p></p>
-            <nav>
-                <a href="Project">Detail</a>
-            </nav>
-        </div>
-    </section>
+      </div>
+    </nav>
+  </header>
+
+     <main class="container py-5">
+        <h1 class="fw-bold about-name mb-5">
+            <span class="name-gradient"> Works </span>
+        </h1>
+             <h2 class="h3 mb-4">
+                <i class="bi bi-journal-text me-2 text-primary"></i> <b>Academic Publications</b>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/artikel 1.png"class="card-img-top" alt="Cover article">
+                        <div class="card-body">
+                            <h3 class="h5 card-title"> Analisis Efektivitas Protokol Autentikasi Jaringan Nirkabel Berdasarkan Parameter (QoS) </h3>
+                            <h4 class="h6 card-subtitle mb-2 text-secondary"> Jejak Digital: Jurnal Ilmiah Multidisiplin, Vol. 2 No. 4, 2026 </h4>
+                            <p class="card-text"> Artikel ini membahas pengaruh sistem autentikasi terhadap kualitas Wi-Fi kampus di Universitas Sulawesi Barat, dengan membandingkan jaringan yang terbuka dan yang memakai autentikasi berdasarkan parameter QoS.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/artikel 2.png" class="card-img-top" alt="Cover article">
+                        <div class="card-body">
+                            <h3 class="h5 card-title"> Studi Komparatif Efisiensi Memori antara Struktur Data Array dan Linked List </h3>
+                            <h4 class="h6 card-subtitle mb-2 text-secondary"> Jejak Digital: Jurnal Ilmiah Multidisiplin, Vol. 2 No. 4, 2026 </h4>
+                            <p class="card-text"> Artikel ini membandingkan array dan linked list dari sisi efisiensi memori dan kecepatan operasi, lewat benchmark di C++ dan Python.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+              <h2 class="h3 mb-4">
+                <i class="bi bi-code-slash me-2 text-primary"></i> <b>Project</b>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/web profil tim.png" class="card-img-top" alt="Cover project">
+                        <div class="card-body">
+                            <h3 class="h5 card-title"> Web Profil Tim </h3>
+                            <p>
+                                <span class="badge text-bg-primary me-1"> HTML </span>
+                                <span class="badge text-bg-primary me-1"> CSS </span>
+                            </p>
+
+                            <p class="card-text"> Halaman profil untuk tim pemrograman mahasiswa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/form registrasi.png" class="card-img-top" alt="Cover project">
+                        <div class="card-body">
+                            <h3 class="h5 card-title"> Form Registrasi </h3>
+                            <p>
+                                <span class="badge text-bg-primary me-1"> HTML </span>
+                                <span class="badge text-bg-primary me-1"> JavaScript </span>
+                                <span class="badge text-bg-primary me-1"> CSS </span>
+                            </p>
+                            <p class="card-text"> Formulir pendaftaran dengan validasi input. </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/kalkulator.png" class="card-img-top" alt="Cover project">
+                        <div class="card-body">
+                            <h3 class="h5 card-title"> Kalkulator Sederhana </h3>
+                            <p>
+                                <span class="badge text-bg-primary me-1"> HTML </span>
+                                <span class="badge text-bg-primary me-1"> JavaScript </span>
+                                <span class="badge text-bg-primary me-1"> CSS </span>
+                            </p>
+                            <p class="card-text"> Kalkulator sederhana untuk penjumlahan, pengurangan, perkalian, dan pembagian.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container py-4 text-center text-secondary small">
+        &copy; 2026 Ummi Rufaidah Hamka
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 </body>
 </html>

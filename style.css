@@ -1,0 +1,392 @@
+/* =====================================================
+   style.css - Portfolio Ummi Rufaidah Hamka
+   Disusun berdasarkan fungsi:
+
+   1. Dasar halaman        (background & font)
+   2. Navbar
+   3. Judul & teks
+   4. Tombol
+   5. Card                 (Works, Pendidikan, Kontak)
+   6. Form
+   7. Foto & hero About
+   ===================================================== */
+
+
+/* =====================================================
+   1. DASAR HALAMAN
+   Background dan font untuk semua halaman.
+   ===================================================== */
+body {
+  min-height: 100vh;
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+  background:
+    linear-gradient(rgba(2, 3, 10, .55), rgba(2, 3, 10, .55)),   /* lapisan gelap agar teks terbaca */
+    #080d20 url("https://ekawahyu-portofolio-eka-wahyu-s-projects.vercel.app/Photo.jpg") center center / cover no-repeat fixed;
+}
+
+
+/* =====================================================
+   2. NAVBAR
+   Tampilan menu navigasi di semua halaman:
+   bar, logo, link menu, menu aktif, dan ikon hamburger (HP).
+   ===================================================== */
+.navbar-custom {
+  background: rgba(11, 14, 22, .88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(123, 125, 199, .3);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-custom .navbar-brand {
+  color: #e8d6c4;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-custom .nav-link {
+  position: relative;                 /* patokan garis bawah menu aktif */
+  color: #e8d6c4;
+  padding: .55rem 1rem;
+  margin-left: .25rem;
+  border-radius: .6rem;
+  transition: color .3s ease, background .3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .08);
+}
+
+/* menu aktif: kotak terang + garis di bawah teks */
+.navbar-custom .nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, .2);
+}
+.navbar-custom .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+/* tombol hamburger di HP */
+.navbar-custom .navbar-toggler       { border-color: #7f7bc7; }
+.navbar-custom .navbar-toggler-icon  { filter: invert(1); }
+
+
+/* =====================================================
+   3. JUDUL & TEKS
+   Judul besar halaman, efek gradient pada teks,
+   dan judul hero di Home.
+   ===================================================== */
+.about-name {
+  font-size: clamp(2.6rem, 5vw, 4.4rem);   /* menyesuaikan lebar layar */
+  line-height: 1.05;
+}
+
+.name-gradient {                            /* teks putih memudar ke abu-abu */
+  background: linear-gradient(90deg, #fff 30%, #8a8a8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-title {
+  line-height: 1.05;
+}
+
+
+/* =====================================================
+   4. TOMBOL
+   Dua gaya tombol buatan sendiri, ditambah efek hover,
+   klik, dan fokus keyboard untuk semua tombol (.btn).
+   ===================================================== */
+
+/* efek dasar semua tombol */
+.btn {
+  transition: transform .25s ease, box-shadow .25s ease,
+              filter .25s ease, background .25s ease,
+              border-color .25s ease, color .25s ease;
+}
+
+@media (hover: hover) {                     /* hanya di perangkat dengan kursor */
+  .btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, .35);
+  }
+}
+
+.btn:active:not(:disabled) {                /* saat ditekan */
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn:focus-visible {                        /* navigasi dengan tombol Tab */
+  outline: 3px solid rgba(91, 155, 255, .6);
+  outline-offset: 3px;
+}
+
+/* tombol utama: gradient biru */
+.btn-resume {
+  color: #fff;
+  font-weight: 700;
+  padding: .9rem 1.6rem;
+  border: 0;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+.btn-resume:hover { color: #fff; filter: brightness(1.15); }
+.btn-resume.btn-sm { padding: .5rem 1rem; border-radius: .7rem; }   /* versi kecil */
+
+/* tombol kedua: garis biru */
+.btn-projects {
+  color: #5b9bff;
+  font-weight: 700;
+  padding: .9rem 1.6rem;
+  border: 1px solid rgba(60, 100, 220, .6);
+  border-radius: 1rem;
+  background: rgba(5, 10, 30, .6);
+}
+.btn-projects:hover { color: #fff; border-color: #3b82f6; }
+
+
+/* =====================================================
+   5. CARD
+   ===================================================== */
+
+.profile-card {
+  background: #0b1220;
+  border: 1px solid #26364d;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-img {
+  width: 95px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0d6efd;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  color: #f1f5f9;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 750;
+}
+
+.profile-name span {
+  color: #0d6efd;
+}
+
+.profile-info {
+  color: #a8b7cc;
+  font-size: 0.9rem;
+}
+
+.skill-badge {
+  background: #172640;
+  color: #dbeafe;
+  border: 1px solid #304563;
+  padding: 9px 12px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+}
+
+.stat-box {
+  background: #101b2d;
+  border: 1px solid #26364d;
+  border-radius: 14px;
+  height: 100%;
+}
+
+.stat-icon {
+  color: #0d6efd;
+  font-size: 1.6rem;
+}
+
+.stat-number {
+  color: #60a5fa;
+  font-size: 1.8rem;
+  font-weight: 750;
+}
+
+@media (max-width: 991px) {
+  #home .display-1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  #home .display-1 {
+    font-size: 2.8rem;
+  }
+}
+
+
+/* ---------- 5a. Card karya (halaman Works) ---------- */
+.card {
+     background: rgba(10, 12, 20, .85);
+     border-color: rgba(255, 255, 255, .1);
+      }
+.work-card {
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.work-card:hover {                          /* naik + bayangan biru */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, .25);
+  border-color: rgba(59, 130, 246, .7);
+}
+.work-card .card-img-top {                  /* gambar sama tinggi, zoom saat hover */
+  height: 200px;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.work-card:hover .card-img-top { transform: scale(1.08); }
+
+/* ---------- 5b. Card pendidikan (halaman About) ---------- */
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 1.2rem;
+  background: rgba(10, 12, 20, .85);
+  transition: transform .35s ease;
+}
+.edu-item:hover { transform: translateY(-5px); }
+
+.edu-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.edu-name  { margin: 0; font-size: 1.4rem; font-weight: 700; }   /* nama sekolah */
+.edu-major { margin: .2rem 0; color: #c4cbe0; }                  /* jurusan / jenjang */
+.edu-year  { margin: 0; color: #8ec5ff; }                        /* tahun */
+
+@media (max-width: 575.98px) {              /* HP: kartu lebih kecil */
+  .edu-item { padding: 1rem 1.2rem; gap: 1rem; }
+  .edu-logo { width: 56px; height: 56px; }
+  .edu-name { font-size: 1.15rem; }
+}
+
+/* ---------- 5c. Card kontak (halaman Contact) ---------- */
+.contact-card {                             /* dua card besar: login & Find Me */
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.contact-item {                             /* satu baris kontak: ikon + judul + username */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  color: #e8ecf5;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, .05);
+  transition: border-color .2s, background .2s;
+}
+.contact-item:hover {
+  color: #fff;
+  border-color: rgba(59, 130, 246, .7);
+  background: rgba(255, 255, 255, .08);
+}
+.contact-item strong { display: block; font-size: 1.1rem; }
+.contact-item small  { color: #aab2c5; }
+
+/* ikon dan warna tiap platform */
+.ci-icon      { font-size: 2.6rem; line-height: 1; }
+.ci-mail      { color: #f0f3fa; }
+.ci-linkedin  { color: #0a66c2; }
+.ci-github    { color: #fff; }
+.ci-instagram {
+  background: linear-gradient(45deg, #fdc468, #e1306c 50%, #5851db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* =====================================================
+   6. FORM
+   Kolom input dengan ikon di halaman Contact
+   (login dan kirim pesan).
+   ===================================================== */
+.input-group-text,
+.input-group .form-control {
+  background: rgba(255, 255, 255, .06);
+  border-color: rgba(255, 255, 255, .12);
+  padding: .9rem 1rem;
+}
+.input-group > :first-child { border-radius: 1rem 0 0 1rem; }
+.input-group > .form-control:last-of-type,
+.input-group > .form-control:nth-child(2) { border-radius: 0 1rem 1rem 0; }
+
+.input-group .form-control:focus {          /* garis biru saat kolom diklik */
+  background: rgba(255, 255, 255, .09);
+  border-color: #3b82f6;
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   7. FOTO & HERO ABOUT
+   Susunan hero halaman About: foto besar yang melayang,
+   memudar di bawah, dan teks di depannya.
+   ===================================================== */
+.about-hero { padding-top: 3rem; }
+
+/* foto (HP: ukuran sedang) */
+.about-photo {
+  max-height: 420px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent);
+  mask-image: linear-gradient(to bottom, #000 80%, transparent);   /* bawah foto memudar */
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {                       /* gerak naik-turun */
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+/* desktop: foto besar, boleh melebihi kolom, teks di depannya */
+@media (min-width: 992px) {
+  .about-photo {
+    max-height: none;
+    max-width: none;
+    height: 85vh;
+    width: auto;
+    position: relative;
+    left: 50%;
+    translate: -50% 0;                      /* tengah kolom, tidak bentrok dengan animasi */
+  }
+  .about-hero .row { min-height: 85vh; }
+  .about-hero .row > div               { position: relative; z-index: 2; }   /* teks di depan */
+  .about-hero .row > div:nth-child(2)  { z-index: 1; }                       /* foto di belakang */
+}
